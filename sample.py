@@ -25,6 +25,5 @@ st.write("3. The model is trained with the past 15 years of NBA statistical data
 st.header("Timeline")
 
 components.iframe(
-    "https://gtvault-my.sharepoint.com/personal/mboling6_gatech_edu/_layouts/15/Doc.aspx?sourcedoc={eb5c569f-4699-4b2d-af77-92c693256e1e}&action=embedview&wdAllowInteractivity=False&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True", width=700, height=700)
-st.write("If the timeline is not showing up please click this link: https://gtvault-my.sharepoint.com/personal/mboling6_gatech_edu/_layouts/15/Doc.aspx?sourcedoc={eb5c569f-4699-4b2d-af77-92c693256e1e}&action=embedview&wdAllowInteractivity=False&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True")
-
+    "https://onedrive.live.com/embed?resid=A783CC250FA9C04A%21105&authkey=%21AA3CMjNWTL09IXg&em=2&wdAllowInteractivity=False&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True", width=700, height=700)
+st.write("If the timeline is not showing up please click this link: https://1drv.ms/x/s!AkrAqQ8lzIOnaYbrezMNI7FvfSA?e=FML6C2&nav=MTVfezAwMDAwMDAwLTAwMDEtMDAwMC0wMTAwLTAwMDAwMDAwMDAwMH0")

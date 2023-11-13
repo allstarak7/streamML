@@ -28,4 +28,4 @@ class Regression():
         y_test_predicted = model.predict(X_test)
         mse = mean_squared_error(y_test_actual, y_test_predicted)
 
-        return mse
+        return y_test_predicted 

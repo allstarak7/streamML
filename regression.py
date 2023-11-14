@@ -26,6 +26,7 @@ class Regression():
         model.fit(X, y)
 
         y_test_predicted = model.predict(X_test)
+        print(y_test_predicted)
         mse = mean_squared_error(y_test_actual, y_test_predicted)
 
         return y_test_predicted 

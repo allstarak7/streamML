@@ -1,6 +1,8 @@
 from feature_selection import FeatureSelection
 import pandas as pd
 from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import mean_squared_error, r2_score
 
 
@@ -30,3 +32,26 @@ class Regression():
         mse = mean_squared_error(y_test_actual, y_test_predicted)
 
         return y_test_predicted 
+
+    def logistic_regression():
+        dataframe = FeatureSelection.create_mvp_column()
+
+        mvp_column = dataframe['was_mvp']
+        dataframe.drop('was_mvp', axis=1)
+
+        # Create modeling and test datasets
+        test_data = dataframe[dataframe['season'] > 2017]
+        players = test_data['player']
+        test_data.drop(['player', 'pos', 'team_id'], axis=1, inplace=True)
+        predict_data = dataframe[dataframe['season'] <= 2017]
+        predict_data.drop(['player', 'pos', 'team_id'], axis=1, inplace=True)
+        predict_labels = mvp_column[dataframe['season'] <= 2017]
+
+        # Train model and print results
+        model = RandomForestClassifier()
+        model.fit(predict_data, predict_labels)
+        predictions = model.predict(test_data)
+        mvps = players[predictions == 1]
+        print(mvps)
+
+        

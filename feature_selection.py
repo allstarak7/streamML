@@ -81,3 +81,24 @@ class FeatureSelection():
         # print(new_dataset.shape)
 
         return new_features, new_dataset
+    
+    def create_mvp_column():
+        # Import data
+        dataframe = pd.read_csv('NBA_Dataset.csv', header=0)
+        grouped_data = dataframe.groupby('season')
+
+        # Put 1 for players who were MVP
+        dataframe['was_mvp'] = 0
+        for season, group in grouped_data:
+            max_index = group['award_share'].idxmax()
+            dataframe.loc[max_index, 'was_mvp'] = 1
+        
+        # Replace award share column with was_mvp
+        dataframe['award_share'] = dataframe['was_mvp']
+        dataframe.drop('was_mvp', axis=1)
+        dataframe.rename(columns={'award_share': 'was_mvp'})
+        
+        dataframe.fillna(dataframe.mean(), inplace=True)
+
+
+        return dataframe

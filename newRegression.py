@@ -1,4 +1,4 @@
-from feature_selection import FeatureSelection
+from new_feature_selection import FeatureSelection
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
@@ -19,8 +19,8 @@ class Regression():
         # target variable, last column
         y = new_dataset[new_dataset[:, 0] < 2023][:, -1]
 
-        X_test = new_dataset[new_dataset[:, 0] == 2022][:, :-1]
-        y_test_actual = new_dataset[new_dataset[:, 0] == 2022][:, -1]
+        X_test = new_dataset[new_dataset[:, 0] == 2023][:, :-1]
+        y_test_actual = new_dataset[new_dataset[:, 0] == 2023][:, -1]
 
         model = LinearRegression()
         model.fit(X, y)

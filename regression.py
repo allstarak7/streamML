@@ -36,12 +36,13 @@ class Regression():
     def logistic_regression():
         dataframe = FeatureSelection.create_mvp_column()
 
+
         mvp_column = dataframe['was_mvp']
         dataframe.drop('was_mvp', axis=1)
 
         # Create modeling and test datasets
         test_data = dataframe[dataframe['season'] > 2017]
-        players = test_data['player']
+        players = test_data[['player', 'season']]
         test_data.drop(['player', 'pos', 'team_id'], axis=1, inplace=True)
         predict_data = dataframe[dataframe['season'] <= 2017]
         predict_data.drop(['player', 'pos', 'team_id'], axis=1, inplace=True)

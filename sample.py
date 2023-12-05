@@ -91,7 +91,7 @@ st.write("Bhandari, I., Colet, E., Parker, J. et al. Advanced Scout: Data Mining
 st.write("N. Ma, NBA Playoff Prediction Using Several Machine Learning Methods, 2021 3rd International Conference on Machine Learning, Big Data and Business Intelligence (MLBDBI), Taiyuan, China, 2021, pp. 113-116, doi: 10.1109/MLBDBI54094.2021.00030.")
 st.write("Beckler, M., Wang, H., &amp; Papamichael, M. (n.d.). (rep.). NBA Oracle. https://www.mbeckler.org/coursework/2008-2009/10701_report.pdf")
 st.header("Contibution Table")
-conSer = pd.Series(["Visualizations, Results, Predictions", "Predictions, Linear Regression, Methods", "Discussion, Data Cleaning, Data Collection", "Methods, Feature Selection, Data Cleaning", "Introduction, Problem Definition, Visualizations"], index=["Aditya", "Michael", "Sohum", "William", "David"])
+conSer = pd.Series(["Update Dataset, Data Collection. Linear Regression, Conclusion", "Video, Random Forest, Other Methods, Streamlit", "Video, Neural Network, Conclusion, Visualizations", "Video, Random Forest, Introduction, Feature Selection", "Video, Neural Network, Problem Definition, Visualizations"], index=["Aditya", "Michael", "Sohum", "William", "David"])
 conDf = pd.DataFrame(data=conSer, index=[
                      "Aditya", "Michael", "Sohum", "William", "David"],  columns=["Contributions"])
 st.table(conDf)

@@ -5,7 +5,7 @@ import numpy as np
 from PIL import Image
 
 st.title('Ml4641 Team 5')
-st.header("Midterm Report")
+st.header("Final Report")
 st.subheader("Intro/Background")
 st.write("The National Basketball Association (NBA) is one of the biggest professional sports organizations in the world. With hundreds of players, dozens of teams, and over 1,000 games played per season, there is a vast amount of data available to analyze. Due to this, many efforts have been made to use AI and Machine Learning methods to predict basketball outcomes. IBM first utilized data mining in the 90’s with Advanced Scout, a tool for NBA management to better analyze hidden trends in basketball statistics (Colet, 1997). Independent projects have also been led, like Nigel Ma developing a model to predict a team’s playoff chances (Ma, 2021) or a group of Carnegie Mellon students using classification methods to predict individual game outcomes (Beckler, Wang, Papamichael).")
 st.write("In this project, we are attempting to predict the winner of the NBA’s most prestigious recognition—the Most Valuable Player Award, meant to reward the greatest individual performance in competition contained to the given season. A linear regression model will be the foundation of the prediction for the MVP award, derived from a data set of over 15,000 player performances, 40 seasons, and 49 unique features. Using these unique features—including individual player statistics, team(s) played for, win shares, points, playing time, etc. over multiple years, we will train a model to predict the winners of different awards for the upcoming 2023-2024 NBA season.")

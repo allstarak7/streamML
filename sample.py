@@ -15,7 +15,7 @@ st.subheader("Data Collection")
 st.write("The dataset, sourced from Kaggle, specifically uses the 1982-2022 NBA Player Statistics with MVP Votes. To ensure data cleanliness and compatibility with scikit-learn, missing values in the dataset were filled with the mean of their respective columns, as scikit-learn does not work with null values. Additionally, a criterion was applied to filter out players whose minutes per game fell under one standard deviation from the mean. This step aims to exclude players who typically do not receive MVP votes due to playing time or performance levels considered below the norm.")
 st.write("Some columns of the dataset contained missing values, specifically statistics that involved some sort of percentage (i.e. 3 point percentage, free throw percentage, etc.). This was due to some players attempting zero shots, resulting in an undefined value. We decided that the best fix for this was to impute the mean of those columns, essentially making the assumption that if those players were to attempt shots, they would complete them at a percentage equal to the average of all other players in the league.")
 st.write("To reduce the size of the dataset and remove irrelevant data (players that have essentially zero chance of winning the MVP award), we determined that for a player’s stats to be taken into account, they must meet a threshold of 10 minutes played per game, around one standard deviation from the mean. This removed around 3,000 rows, which will hopefully aid with model efficiency and accuracy. To further improve our models in the future, we will consider increasing this threshold to further narrow the dataset.")
-st.write("UPDATE: After the cleaning of our data, we realized that we want to have an option to predict the current years MVP based on current sts\at. So we merged all data up until Decemebr 4, 2023 to our dataset. This means that our dataset now ranges from 1982 - December 4, 2023.")
+st.write("UPDATE: After the cleaning of our data, we realized that we want to have an option to predict the current years MVP based on current stats. So we merged all data up until December 4, 2023 to our dataset. This means that our dataset now ranges from 1982 - December 4, 2023.")
 
 
 
@@ -30,7 +30,7 @@ st.image(image, caption='Variance of Features')
 st.write("Using this approach, we retrieved the 10 actual players with highest award share and compared the same players predicted award share.")
 st.write("UPDATE: Additionally, as we updated our dataset to reflect statistics until December 4, 2023, we decided to predict our current NBA season's MVP.")
 st.caption("Results")
-st.write("To evaluate and analyze our model using quantitative means we decided we could use Root Mean Squared Error(RMSE), Mean Absoluter Error (MAE), or R-squared. For the Midterm Report, we settled on RMSE.")
+st.write("To evaluate and analyze our model using quantitative means we decided we could use Root Mean Squared Error(RMSE), Mean Absoluter Error (MAE), or R-squared. We settled on RMSE.")
 aimage = Image.open('act10.png')
 st.image(aimage, caption='Actual Top 10 Award Share')
 pimage = Image.open('pred10.png')
